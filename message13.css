@@ -1,0 +1,20 @@
+/* Button Styles */
+.message-button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-family: 'Verdana', sans-serif;
+    color: #ffffff;
+    background: linear-gradient(90deg, #f3a683, #778beb);
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.message-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}

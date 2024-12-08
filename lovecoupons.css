@@ -1,0 +1,113 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Softer, modern font */
+  background: linear-gradient(135deg, #f6e3e3, #f9d6d6); /* Subtle pink gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: #333; /* Darker text for better contrast */
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+  
+  /* Container for the coupons */
+  .coupon-container {
+    display: grid; /* Use grid for better control over layout */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Automatically adjust the number of columns based on screen size */
+    gap: 20px;
+    justify-items: center; /* Center the coupons within each grid cell */
+    padding: 20px;
+    max-width: 1200px; /* Ensure the container does not stretch too far */
+    margin: 0 auto; /* Center the whole container */
+}
+
+/* Individual Coupon Styles */
+.coupon {
+    background-color: #f8d7db;
+    border-radius: 12px; /* Slightly rounded corners for a smoother look */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Softer shadow for a modern feel */
+    width: 100%; /* Make the coupon width responsive */
+    height: 200px; /* Adjust height to look balanced */
+    position: relative;
+    font-family: 'Georgia', serif;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow effect */
+    border: 3px dashed #e6007f; /* Dashed border to mimic a ticket */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center; /* Center the content */
+}
+  
+  .coupon:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Coupon Header */
+  .coupon-header {
+    background-color: #ffc0cb;
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4e1b1b;
+    text-transform: uppercase;
+  }
+  
+  /* Coupon Body */
+  .coupon-body {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 10px 0;
+    color: #4e1b1b;
+  }
+  
+  .coupon-body .coupon-text {
+    font-weight: bold;
+    color: #e6007f;
+  }
+  
+  /* Coupon Footer */
+  .coupon-footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8f2d5a;
+    font-style: italic;
+    margin-top: auto;
+  }
+  
+  /* Adding a tear effect to the edges to resemble ticket perforations */
+  .coupon::before,
+  .coupon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #e6007f;
+    border-radius: 50%;
+    top: -10px;
+    left: 10px;
+    right: 10px;
+  }
+  
+  .coupon::after {
+    top: auto;
+    bottom: -10px;
+  }
+  
+  /* Add some spacing between coupons */
+  .coupon + .coupon {
+    margin-top: 20px;
+  }
+  
+  
